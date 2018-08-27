@@ -1,0 +1,70 @@
+@import "services_styles.less";
+
+#services {
+  color: #7a7979;
+}
+
+#blog {
+  color: #030303;
+}
+
+#service2 {
+  margin-top: 0.5%;
+}
+#service3 {
+  margin-top: 7%;
+}
+
+.column {
+
+  &.short {
+
+    &.middle {
+
+      .col_content {
+        width: 95%;
+        margin-top: 9%;
+
+        nav {
+          border-bottom: none;
+
+          a {
+            display: block;
+
+            p {
+              font-style: italic;
+            }
+
+            &:hover {
+              h2, p {
+                color: #030303;
+              }
+            }
+
+            &.active {
+              h2, p {
+                color: #030303;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.long {
+
+    .col_content{
+
+      #img2 {
+        vertical-align: bottom;
+      }
+
+      table {
+        td:nth-child(odd) {
+          width: 51%;
+        }
+      }
+    }
+  }
+}
