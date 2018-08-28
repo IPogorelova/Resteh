@@ -4,6 +4,9 @@
   color: #030303;
 }
 
+#mob_general_text {
+  display: none;
+}
 
 .column {
 
@@ -111,6 +114,47 @@ table {
       font-size: 18px;
       line-height: 1.33;
       color: #030303;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #general_text {
+    display: none;
+  }
+
+  #mob_general_text {
+    display: block;
+
+    h1 {
+      margin-bottom: 4.26%;
+    }
+
+    a {
+      margin: 0;
+      padding-top: 2.5%;
+      padding-bottom: 2.5%;
+
+      &:last-child {
+        padding-bottom: 8.5%;
+      }
+    }
+  }
+
+  .column{
+
+    &.short {
+
+      &.left {
+        width: 100%;
+        z-index: 999;
+      }
+    }
+
+    &.long {
+      display: none;
     }
   }
 }

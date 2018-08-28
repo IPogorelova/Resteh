@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="blog_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <script defer src="blog.js"></script>
+    <script defer src="services/burger_menu.js"></script>
     <title>Блог</title>
 </head>
 <body>
@@ -20,11 +21,11 @@
             <div id="mid_stripe"></div>
             <div id="bott_stripe"></div>
         </div>
-        <div class="col_content" id="menu">
+        <div class="col_content">
             <nav>
                 <a id="services" href="resteckh_services.html">Что мы делаем</a>
                 <a id="projects" href="resteckh_projects.html">Проекты</a>
-                <a id="blog" href="#">Блог</a>
+                <a id="blog" href="resteckh_blog.html">Блог</a>
                 <a id="about" href="resteckh_home.html">О нас</a>
             </nav>
             <footer>
@@ -40,16 +41,27 @@
                     <nobr>+7 (921) 585-95-89</nobr><br><br>
 
                     info@restech.ru</p>
-                <p id="small_contacts">
-                    190005, <nobr>Санкт-Петербург</nobr>,<br>
-                    <nobr>7-я</nobr> Красноармейская, 25<br><br>
-
-                    <nobr>+7 (921) 984-82-97</nobr><br>
-                    <nobr>+7 (921) 585-95-89</nobr><br><br>
-
-                    info@restech.ru</p>
             </footer>
         </div>
+    </div>
+    <div class="col_content" id="menu">
+        <nav>
+            <a href="resteckh_services.html">Что мы делаем</a>
+            <a href="resteckh_projects.html">Проекты</a>
+            <a href="resteckh_blog.html">Блог</a>
+            <a href="resteckh_home.html">О нас</a>
+        </nav>
+        <footer>
+            <h3>Контакты</h3>
+            <p id="small_contacts">
+                190005, <nobr>Санкт-Петербург</nobr>,<br>
+                <nobr>7-я</nobr> Красноармейская, 25<br><br>
+
+                <nobr>+7 (921) 984-82-97</nobr><br>
+                <nobr>+7 (921) 585-95-89</nobr><br><br>
+
+                info@restech.ru</p>
+        </footer>
     </div>
     <div class="column short middle" id="scroller">
         <div class="logo"></div>
@@ -70,7 +82,23 @@
                 </a>
             </nav>
         </div>
-
+        <div class="col_content" id="mob_general_text">
+            <nav>
+                <a href="blog/article1.html">
+                    <h2>Декоративная обработка природных камней</h2>
+                    <p>Иван Иванов, специалист по&nbsp;камням,&nbsp;2018</p>
+                </a>
+                <a href="#">
+                    <h2>Системы фасадной отделки</h2>
+                    <p>Константин Константинов, архитектор, 2016</p>
+                </a>
+                <a href="#">
+                    <h2>Строительные материалы, применяемые в&nbsp;конструкциях зданий
+                        и&nbsp;сооружений культурного назначения</h2>
+                    <p>Петр Петров, специалист по&nbsp;лабораторным исследованиям,&nbsp;2017</p>
+                </a>
+            </nav>
+        </div>
     </div>
     <div class="column long">
         <div class="logo"></div>
@@ -121,7 +149,7 @@
         <div class="col_content active" id="service2">
             <table>
                 <tr>
-                    <td><h1>Декоративная обработка природных&nbsp;камней</h1></td>
+                    <td><h1>Системы фасадной отделки</h1></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -153,7 +181,8 @@
         <div class="col_content active" id="service3">
             <table>
                 <tr>
-                    <td><h1>Декоративная обработка природных&nbsp;камней</h1></td>
+                    <td><h1>Строительные материалы, применяемые в&nbsp;конструкциях зданий
+                        и&nbsp;сооружений культурного назначения</h1></td>
                     <td></td>
                 </tr>
                 <tr>
