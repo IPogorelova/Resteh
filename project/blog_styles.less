@@ -15,6 +15,10 @@
   margin-top: 7%;
 }
 
+#mob_general_text {
+  display: none;
+}
+
 .column {
 
   &.short {
@@ -68,10 +72,64 @@
       }
 
       table {
+
+        h1 {
+          color: #030303;
+        }
+
         td:nth-child(odd) {
           width: 51%;
         }
       }
     }
   }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #general_text {
+    display: none;
+  }
+
+  #mob_general_text {
+    display: block;
+    width: 90%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  #menu.open_menu {
+    height: 35%;
+    top: 10%;
+  }
+
+  .column{
+
+    &.short {
+
+      &.left {
+        z-index: 999;
+      }
+
+      &.middle {
+
+        .col_content {
+          nav {
+            a p {
+                margin-bottom: 2%;
+              }
+            }
+          }
+        }
+      }
+
+    &.long {
+      display: none;
+    }
+  }
+
+
 }

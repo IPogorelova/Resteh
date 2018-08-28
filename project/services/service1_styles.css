@@ -243,7 +243,7 @@ td {
     top: -100%;
   }
   #menu.open_menu {
-    height: 26%;
+    height: 35%;
     top: 8%;
     background-color: #ffffff;
     transition: top 0.7s;
@@ -327,6 +327,9 @@ td {
 #services {
   color: #030303;
 }
+#mob_general_text {
+  display: none;
+}
 .column.short.left {
   width: 24.5%;
 }
@@ -407,6 +410,9 @@ table td h2 {
   #general_text {
     display: none;
   }
+  #mob_general_text {
+    display: block;
+  }
   #mob_general_text h1 {
     margin-bottom: 4.26%;
   }
@@ -414,6 +420,9 @@ table td h2 {
     margin: 0;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
+  }
+  #mob_general_text a:last-child {
+    padding-bottom: 8.5%;
   }
   .column.short.left {
     width: 100%;
