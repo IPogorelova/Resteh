@@ -438,6 +438,8 @@ table td h2 {
   }
   #mob_general_text {
     display: block;
+    margin-left: 0;
+    margin-right: 0;
   }
   #mob_general_text h1 {
     color: #030303;
@@ -447,10 +449,12 @@ table td h2 {
   }
   #mob_general_text p {
     width: 97%;
+    margin-left: 1.5%;
     font-size: 14px;
   }
   #mob_general_text img {
-    width: 98%;
+    width: 100%;
+    margin-left: 1.5%;
   }
 }
 .column.short.middle {
@@ -460,4 +464,8 @@ table td h2 {
   display: flex;
   flex-direction: column;
   width: 97%;
+}
+.column.long .col_content {
+  margin-left: 0;
+  margin-right: 0;
 }
