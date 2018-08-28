@@ -394,6 +394,12 @@ td {
   #general_text p span {
     color: #030303;
   }
+  #hover_project1.proj_preview,
+  #hover_project2.proj_preview,
+  #hover_project3.proj_preview,
+  #hover_project4.proj_preview {
+    display: none;
+  }
   .column.long {
     display: none;
   }
@@ -402,5 +408,11 @@ td {
   }
   .column.short.middle a {
     display: block;
+  }
+  .column.short.middle .proj_preview {
+    margin-top: 0;
+  }
+  .column.short.middle .col_content .tags {
+    margin-top: 3%;
   }
 }

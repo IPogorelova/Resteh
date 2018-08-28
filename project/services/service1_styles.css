@@ -423,48 +423,41 @@ table td h2 {
     display: none;
   }
 }
-#services {
-  color: #7a7979;
+@media screen and (max-width: 768px) {
+  BODY {
+    max-width: 760px;
+    overflow-x: hidden;
+  }
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  #menu.open_menu {
+    height: 35%;
+    top: 10%;
+  }
+  #mob_general_text {
+    display: block;
+  }
+  #mob_general_text h1 {
+    color: #030303;
+  }
+  #mob_general_text h2 {
+    color: #030303;
+  }
+  #mob_general_text p {
+    width: 97%;
+    font-size: 14px;
+  }
+  #mob_general_text img {
+    width: 98%;
+  }
 }
-#blog {
-  color: #030303;
+.column.short.middle {
+  display: none;
 }
-#service2 {
-  margin-top: 0.5%;
-}
-#service3 {
-  margin-top: 7%;
-}
-.column.short.middle .col_content {
-  width: 95%;
-  margin-top: 9%;
-}
-.column.short.middle .col_content nav {
-  border-bottom: none;
-}
-.column.short.middle .col_content nav a {
-  display: block;
-}
-.column.short.middle .col_content nav a h2 {
-  margin-bottom: 3%;
-}
-.column.short.middle .col_content nav a p {
-  font-style: italic;
-  line-height: 1.43;
-  margin-top: 0;
-  margin-bottom: 18%;
-}
-.column.short.middle .col_content nav a:hover h2,
-.column.short.middle .col_content nav a:hover p {
-  color: #030303;
-}
-.column.short.middle .col_content nav a.active h2,
-.column.short.middle .col_content nav a.active p {
-  color: #030303;
-}
-.column.long .col_content #img2 {
-  vertical-align: bottom;
-}
-.column.long .col_content table td:nth-child(odd) {
-  width: 51%;
+.column.long {
+  display: flex;
+  flex-direction: column;
+  width: 97%;
 }

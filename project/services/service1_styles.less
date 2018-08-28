@@ -1,0 +1,57 @@
+@import "../services_styles.less";
+
+@media screen and (max-width: 768px) {
+
+  BODY {
+    max-width: 760px;
+    overflow-x: hidden;
+  }
+
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #menu.open_menu {
+    height: 35%;
+    top: 10%;
+  }
+
+  #mob_general_text {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+
+    h1 {
+      color: #030303;
+    }
+
+    h2 {
+      color: #030303;
+    }
+
+    p {
+      width: 97%;
+      margin-left: 1.5%;
+      font-size: 14px;
+    }
+
+    img {
+      width: 100%;
+      margin-left: 1.5%;
+    }
+  }
+}
+
+.column {
+
+  &.short.middle {
+    display: none;
+  }
+
+  &.long {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+  }
+}
