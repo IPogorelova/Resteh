@@ -6,13 +6,23 @@ refer.onclick = function() {
 
 // "burger"-menu open&close script
 var menu_button = document.getElementById('burger');
+var close_button = document.getElementById('close');
 var menu_element = document.getElementById('menu');
 
 menu_button.onclick = function() {
   menu_element.classList.toggle('open_menu');
+  menu_button.classList.toggle('open_menu');
+  close_button.classList.toggle('open_menu');
 };
 
-//project descriptions hover on photo
+close_button.onclick = function() {
+    menu_element.classList.toggle('open_menu');
+    menu_button.classList.toggle('open_menu');
+    close_button.classList.toggle('open_menu');
+};
+
+
+/*//project descriptions hover on photo
 var photo1 = document.getElementById('photo1');
 var photo2 = document.getElementById('photo2');
 var photo3 = document.getElementById('photo3');
@@ -78,4 +88,5 @@ photo4.onmouseout = function() {
     general.classList.toggle('proj_preview');
     projects.classList.toggle('proj_preview');
     about.classList.toggle('proj_preview');
-};
+};*/
+

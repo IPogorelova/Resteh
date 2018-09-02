@@ -28,6 +28,13 @@ menu1.onclick = function () {
     service3.classList.remove('active');
     service4.classList.remove('active');
     service5.classList.remove('active');
+
+
+    menu1.classList.add('active');
+    menu2.classList.remove('active');
+    menu3.classList.remove('active');
+    menu4.classList.remove('active');
+    menu5.classList.remove('active');
 };
 
 menu2.onclick = function () {

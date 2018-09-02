@@ -16,7 +16,7 @@ td {
   line-height: normal;
   letter-spacing: 0.2px;
   text-align: left;
-  color: #7a7979;
+  color: #a0a0a0;
   text-decoration: none;
 }
 #wrapper {
@@ -38,11 +38,55 @@ td {
   padding-bottom: 1px;
   font-weight: normal;
   color: #9b9b9b;
+  transition: all 0.7s;
+}
+.logo svg {
+  fill: #B2B2B2;
+  transition: all 0.7s;
+}
+.logo:hover h1 {
+  transition: color 0.7s;
+  color: #030303;
+}
+.logo:hover svg {
+  fill: #030303;
+  transition: 0.7s;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 0.7s;
+  -webkit-transition-timing-function: ease-in-out;
 }
 #burger div {
   width: 25px;
   height: 1px;
   background-color: #030303;
+}
+#close {
+  position: absolute;
+  left: 91%;
+  top: 28%;
+  width: 25px;
+  height: 25px;
+  z-index: 9999;
+  -o-transition: transform 3s linear;
+  -ms-transition: transform 3s linear;
+  -moz-transition: transform 3s linear;
+  -webkit-transition: transform 3s linear;
+  transition: transform 3s linear;
+}
+#close:before,
+#close:after {
+  position: absolute;
+  left: 12px;
+  content: ' ';
+  height: 25px;
+  width: 1px;
+  background-color: #030303;
+}
+#close:before {
+  transform: rotate(45deg);
+}
+#close:after {
+  transform: rotate(-45deg);
 }
 #menu {
   display: none;
@@ -64,7 +108,7 @@ td {
   border-right: solid 0.5px #d9d9d9;
 }
 .column.short.left {
-  width: 21.5%;
+  width: 24.5%;
   min-width: 215px;
   padding-left: 1.4%;
 }
@@ -83,9 +127,11 @@ td {
 .column.short.left .col_content nav a {
   margin-top: 1.8%;
   margin-bottom: 1.8%;
+  transition: all 0.7s;
 }
 .column.short.left .col_content nav a:hover {
   color: #030303;
+  transition: all 0.7s;
 }
 .column.short.left .col_content nav #about {
   display: none;
@@ -95,8 +141,8 @@ td {
 }
 .column.short.left .col_content FOOTER {
   align-self: flex-start;
-  width: 90%;
-  margin-bottom: 19%;
+  width: 86%;
+  margin-bottom: 16%;
   font-weight: 300;
 }
 .column.short.left .col_content FOOTER h3 {
@@ -104,20 +150,21 @@ td {
   font-family: Roboto, sans-serif;
 }
 .column.short.left .col_content FOOTER p {
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 1.43;
 }
 .column.short.middle {
-  width: 26%;
+  width: 25%;
   height: 100vh;
-  padding-left: 3.4%;
-  padding-right: 3.3%;
-  /*overflow: hidden;*/
+  padding-left: 3.3%;
+  padding-right: 3.4%;
   overflow-y: scroll;
   min-width: 309px;
 }
 .column.short.middle .logo {
-  height: 43px;
+  width: 100%;
+  min-height: 43px;
 }
 .column.short.middle .col_content {
   max-width: 290px;
@@ -139,18 +186,14 @@ td {
 }
 .column.short.middle .col_content p span {
   font-size: 16px;
+  color: #030303;
 }
 .column.short.middle #hover_project1,
 .column.short.middle #hover_project2,
 .column.short.middle #hover_project3,
 .column.short.middle #hover_project4 {
   display: none;
-}
-.column.short.middle #hover_project1.proj_preview,
-.column.short.middle #hover_project2.proj_preview,
-.column.short.middle #hover_project3.proj_preview,
-.column.short.middle #hover_project4.proj_preview {
-  display: flex;
+  margin-top: 11%;
 }
 .column.short.middle .proj_preview {
   margin-top: 11.5%;
@@ -176,31 +219,32 @@ td {
 .column.long {
   display: flex;
   flex-direction: column;
-  width: 53.5%;
+  width: 51.5%;
   height: 100%;
   padding-left: 20px;
   padding-right: 20px;
   overflow-y: scroll;
 }
 .column.long .logo {
-  width: 100%;
-  height: 43px;
+  width: 95%;
+  min-height: 43px;
 }
 .column.long .col_content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 7.2% -1.4% -1.4% -1.4%;
+  margin: 5% -1.4% -1.4% -1.4%;
   padding: 0;
 }
 .column.long .col_content img {
   align-self: center;
   margin: 10px;
   filter: grayscale(100%);
+  transition: all 0.7s;
 }
 .column.long .col_content img:hover {
   filter: none;
-  transition: all 0.3s;
+  transition: all 0.7s;
 }
 .column.long .col_content img:nth-of-type(3n+1) {
   width: 97%;
@@ -215,12 +259,29 @@ td {
   #burger {
     display: none;
   }
+  #close {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   #wrapper {
     flex-direction: column;
     height: 100%;
     overflow-y: scroll;
+  }
+  #close {
+    display: none;
+  }
+  #burger.open_menu {
+    display: none;
+  }
+  #close.open_menu {
+    display: block;
+    -o-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
   }
   .column.short.middle {
     width: 100%;
@@ -330,17 +391,8 @@ td {
 #mob_general_text {
   display: none;
 }
-.column.short.left {
-  width: 24.5%;
-}
-.column.short.left .col_content nav {
-  margin-top: 15.2%;
-}
 .column.short.left .col_content nav #about {
   display: block;
-}
-.column.short.left .col_content FOOTER p {
-  width: 93%;
 }
 .column.short.middle {
   padding-right: 2.1%;
@@ -357,12 +409,14 @@ td {
   margin-bottom: 7.5%;
   line-height: 1.5;
   letter-spacing: normal;
+  transition: all 0.7s;
 }
 .column.short.middle .col_content nav a:last-child {
   margin-bottom: 15%;
 }
 .column.short.middle .col_content nav a:hover {
   color: #030303;
+  transition: all 0.7s;
 }
 .column.short.middle .col_content nav a.active {
   color: #030303;
@@ -372,15 +426,16 @@ td {
   line-height: 1.57;
   letter-spacing: normal;
 }
-.column.long {
-  width: 49.5%;
+.column.short.middle .col_content p span {
+  margin-left: -3.5%;
 }
 .column.long .col_content {
-  margin: 7% -3.5% -1.4% -3.5%;
+  margin: 0.5% -3.5% -1.4% -3.5%;
   display: none;
 }
 .column.long .col_content.active {
   display: block;
+  margin: 0.5% -3.5% -1.4% -3.5%;
 }
 #service2,
 #service3,
@@ -391,6 +446,9 @@ td {
 table {
   border-spacing: 25px 20px;
 }
+table img {
+  max-width: 355px;
+}
 table td {
   vertical-align: top;
   width: 50%;
@@ -399,9 +457,12 @@ table td {
 }
 table td:nth-child(odd) {
   width: 49%;
-  padding-top: 1.6%;
+  padding-top: 0.6%;
+  padding-left: 1%;
 }
 table td h2 {
+  width: 79%;
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 1.33;
   color: #030303;
@@ -451,6 +512,7 @@ table td h2 {
     margin-right: 0;
   }
   #mob_general_text h1 {
+    margin-left: 1.5%;
     color: #030303;
   }
   #mob_general_text h2 {
@@ -459,11 +521,13 @@ table td h2 {
   #mob_general_text p {
     width: 97%;
     margin-left: 1.5%;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.5;
   }
   #mob_general_text img {
     width: 100%;
     margin-left: 1.5%;
+    filter: grayscale(100%);
   }
 }
 .column.short.middle {
