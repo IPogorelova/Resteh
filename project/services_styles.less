@@ -13,20 +13,14 @@
   &.short {
 
     &.left {
-      width: 24.5%;
 
       .col_content {
 
         nav {
-          margin-top: 15.2%;
 
           #about {
             display: block;
           }
-        }
-
-        FOOTER p {
-          width: 93%;
         }
       }
     }
@@ -50,6 +44,7 @@
             margin-bottom: 7.5%;
             line-height: 1.5;
             letter-spacing: normal;
+            transition: all 0.7s;
 
             &:last-child {
               margin-bottom: 15%;
@@ -57,6 +52,7 @@
 
             &:hover {
               color: #030303;
+              transition: all 0.7s;
             }
 
             &.active {
@@ -69,6 +65,10 @@
           font-size: 14px;
           line-height: 1.57;
           letter-spacing: normal;
+
+          span {
+            margin-left: -3.5%;
+          }
         }
 
       }
@@ -76,14 +76,14 @@
   }
 
   &.long {
-    width: 49.5%;
 
     .col_content {
-      margin: 7% -3.5% -1.4% -3.5%;
+      margin: 0.5% -3.5% -1.4% -3.5%;
       display: none;
 
       &.active {
         display: block;
+        margin: 0.5% -3.5% -1.4% -3.5%;
       }
     }
   }
@@ -99,6 +99,10 @@
 table {
   border-spacing: 25px 20px;
 
+  img {
+    max-width: 355px;
+  }
+
   td {
     vertical-align: top;
     width: 50%;
@@ -107,10 +111,13 @@ table {
 
     &:nth-child(odd) {
       width: 49%;
-      padding-top: 1.6%;
+      padding-top: 0.6%;
+      padding-left: 1%;
     }
 
     h2 {
+      width: 79%;
+      margin-bottom: 0;
       font-size: 18px;
       line-height: 1.33;
       color: #030303;
@@ -129,7 +136,7 @@ table {
     display: block;
 
     h1 {
-      margin-bottom: 4.26%;
+      margin-bottom: 3.5%;
     }
 
     a {
