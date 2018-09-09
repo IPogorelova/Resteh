@@ -139,6 +139,11 @@ h1, h2, h3, p, a, td {
     display: none;
 }
 
+#scroll_helper {
+  width: 25%;
+  min-width: 309px;
+}
+
 
   .column {
     display: flex;
@@ -168,7 +173,7 @@ h1, h2, h3, p, a, td {
           nav {
             display: flex;
             flex-direction: column;
-            margin-top: 17.2%;
+            margin-top: 7.2%;
             margin-bottom: -1.8%;
 
             a {
@@ -212,12 +217,10 @@ h1, h2, h3, p, a, td {
       }
 
       &.middle {
-        width: 25%;
         height: 100vh;
-        padding-left: 3.3%;
-        padding-right: 3.4%;
+        padding-left: 8.3%;
+        padding-right: 8.4%;
         overflow-y: scroll;
-        min-width: 309px;
 
         .logo {
           width: 100%;
@@ -358,6 +361,10 @@ h1, h2, h3, p, a, td {
       overflow-y: scroll;
     }
 
+    #scroll_helper {
+      width: 100%;
+    }
+
     #burger {
       display: block;
       left: 92%;
@@ -384,6 +391,8 @@ h1, h2, h3, p, a, td {
 
     .column.short.middle {
       width: 100%;
+      padding-left: 3.3%;
+      padding-right: 3.4%;
 
       #hover_project1,
       #hover_project2,
@@ -498,6 +507,13 @@ h1, h2, h3, p, a, td {
   }
 
 @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  #scroll_helper {
+    overflow-x: hidden;
+    border-right: 0.5px solid #d9d9d9;
+    width: 25%;
+  }
+
   .column {
     &.short {
       &.left .col_content {
@@ -524,8 +540,15 @@ h1, h2, h3, p, a, td {
         }
       }
 
-      &.middle .col_content {
-        width: 95%;
+      &.middle {
+        width: 107%;
+        margin-right: -17px;
+        padding-left: 8.3%;
+        padding-right: 8.4%;
+
+        .col_content {
+          width: 95%;
+        }
       }
     }
 
@@ -541,5 +564,18 @@ h1, h2, h3, p, a, td {
         flex: 0 0 47% !important;
       }
     }
+  }
+}
+
+
+@-moz-document url-prefix() {
+
+  #scroll_helper {
+    overflow-x: hidden;
+    border-right: 0.5px solid #d9d9d9;
+  }
+
+  #scroller {
+    margin-right: -17px;
   }
 }
