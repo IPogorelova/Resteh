@@ -138,6 +138,11 @@ td {
   width: 25%;
   min-width: 309px;
 }
+#text_block {
+  position: absolute;
+  left: 26.5%;
+  top: 0;
+}
 .column {
   display: -webkit-box;
   display: -webkit-flex;
@@ -446,6 +451,8 @@ td {
   }
   .column.short #general_text.proj_preview {
     display: block;
+    position: -webkit-sticky;
+    position: sticky;
   }
   #menu {
     display: -webkit-box;

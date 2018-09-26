@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="projects_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script defer src="services/burger_menu.js"></script>
     <script defer src="script.js"></script>
     <script type="text/javascript" src="hover_photos.js"></script>
     <title>Павильон катальной горки</title>
@@ -92,6 +93,9 @@
                     <div>фрески</div>
                 </div>
             </div>
+
+            <div id="text_block"></div>
+
             <div class="col_content" id="hover_project1">
                 <p><span class="colortext">Павильон Катальной горки,</span><br>
                     северный фасад, проект 2015&nbsp;года<br><br>
@@ -129,10 +133,30 @@
     <div class="column long" style="display: flex" id="photo_content">
         <div class="logo"></div>
         <div class="col_content">
-            <img id="photo1" src="photo_resteh/photo1.jpg" onclick="self.location.href='#';">
-            <img id="photo2" src="photo_resteh/photo2.jpg" onclick="self.location.href='#';">
-            <img id="photo3" src="photo_resteh/new_photo3.jpg" onclick="self.location.href='#';">
-            <img id="photo4" src="photo_resteh/photo4.jpg" onclick="self.location.href='#';">
+            <img class="photo" src="photo_resteh/photo1.jpg" onclick="self.location.href='#';"
+            data-info="<span class='colortext' style='color: #030303'>Павильон Катальной горки,</span><br>
+            северный фасад, проект 2015&nbsp;года<br><br>
+            В&nbsp;результате натурных и&nbsp;лабораторных исследований<br>
+            материалов отделки стало возможным разработать технологию<br>
+            проведения работ по&nbsp;реставрации фасада&nbsp;павильона.">
+            <img class="photo" src="photo_resteh/photo2.jpg" onclick="self.location.href='#';"
+            data-info="<span class='colortext' style='color: #030303'>Спасо-Преображенский собор,</span><br>
+            западный фасад, проект 2015&nbsp;года<br><br>
+            После проведения ряда исследований мы&nbsp;разработали<br>
+            технологию проведения процесса реставрации<br>
+            как внутренней, так и&nbsp;внешней отделки&nbsp;собора.">
+            <img class="photo" src="photo_resteh/new_photo3.jpg" onclick="self.location.href='#';"
+            data-info="<span class='colortext' style='color: #030303'>Дом с колоннами,</span><br>
+            двухэтажное строение, проект 2016&nbsp;года<br><br>
+            План реставрационных работ включает восстановление разных<br>
+            видов отделки с&nbsp;помощью современных технологий<br>
+            и&nbsp;строительных&nbsp;материалов.">
+            <img class="photo" src="photo_resteh/photo4.jpg" onclick="self.location.href='#';"
+            data-info="<span class='colortext' style='color: #030303'>Потолок гостиной павильона Катальной&nbsp;горки,</span><br>
+            первый этаж павильона, проект 2015&nbsp;года<br><br>
+            Благодаря полученной исследовательской базе, в&nbsp;результате<br>
+            реставрационных работ удалось сохранить фрески, присутствующие<br>
+            на&nbsp;потолке с&nbsp;момента основания&nbsp;павильона.">
         </div>
     </div>
 </div>
